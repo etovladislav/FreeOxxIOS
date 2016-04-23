@@ -1,14 +1,22 @@
 //
 //  ViewController.h
-//  FreeOxx
+//  MapKitDemo
 //
-//  Created by Владислав Ульянов on 23.04.16.
-//  Copyright © 2016 Владислав Ульянов. All rights reserved.
+//  Created by TheAppGuruz-iOS-103 on 09/03/15.
+//  Copyright (c) 2015 TheAppGururz. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <CLLocationManagerDelegate>
+{
+    CLLocationManager *objLocationManager;
+    double latitude_UserLocation, longitude_UserLocation;
+}
+
+@property (weak, nonatomic) IBOutlet MKMapView *objMapView;
 
 
 @end
